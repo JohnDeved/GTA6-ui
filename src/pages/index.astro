@@ -1,9 +1,17 @@
 ---
 import {Button} from '@nextui-org/react';
+import { css } from '../../styled-system/css';
 ---
 
 <div>
   <main>
 		<Button color="primary" client:visible>My button</Button>
+		<Button color="primary" client:visible className={css({ color: 'red !important' })}}>
+      Button
+    </Button>
 	</main>
 </div>
+
+<style is:global>
+	@import '../../styled-system/styles.css';
+</style>
